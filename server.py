@@ -1,14 +1,13 @@
 from flask import Flask
 import random
 app = Flask(__name__)
+random_number = random.randint(0,9)
 
 @app.route('/')
 def render_home_page():
     return ('<h1 style="text-align: center"> Guess the number </h1>'
             '<img src="https://media.giphy.com/media/3o7aCSPqXE5C6T8tBC/giphy.gif">')
 
-
-random_number = random.randint(0,9)
 
 
 @app.route('/<number>')
